@@ -1,11 +1,4 @@
 @import '../../assets/variables.scss';
-// h1, h2 {
-//   position: absolute;
-//   z-index: 100;
-//   top: 50%;
-//   left: 36.5%;
-//   transform: translate(-50%, -50%);
-// }
 h1 {
   font-size: 5vw;
   color: $main-color;
@@ -32,25 +25,3 @@ h2 {
 .thats-me {
     width: 50%;
 }
-
-// .intro-jumbotron {
-//   background: url('../../assets/background.jpg') no-repeat center center;
-//   opacity: 0.8;
-//   background-size: cover;
-//   height: 100vh;
-//   max-width: 99vw;
-//   top: 0;
-//   left: 0;
-//   z-index: -1;
-// }
-
-// img {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   bottom: 0;
-//   margin: auto;
-//   min-width: 50%;
-//   min-height: 50%;
-// }
