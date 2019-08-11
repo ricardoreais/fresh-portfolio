@@ -1,0 +1,26 @@
+@import '../../assets/variables.scss';
+
+.progress {
+  background-color: white;
+  border-radius: 0%;
+}
+
+.progress-bar {
+  background-color: $main-color;
+}
+
+.w-85 {
+  width: 85%;
+}
+
+.w-65 {
+  width: 65%;
+}
+
+.w-55 {
+  width: 55%;
+}
+
+.bg-extra-light {
+  background-color: white;
+}
