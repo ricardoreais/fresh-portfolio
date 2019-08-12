@@ -1,17 +1,26 @@
-<ul class="nav fixed-top justify-content-end">
-  <li class="nav-item">
-    <a class="nav-link" href="#">Home</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#experience">Professional experience</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#education">Education</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Projects</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Contact</a>
-  </li>
-</ul>
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" [class.bg-extra-light]="navbarOpen">
+    <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" [class.show]="navbarOpen">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#experience">Professional experience</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#education">Education</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Projects</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>

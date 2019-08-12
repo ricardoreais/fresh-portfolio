@@ -155,19 +155,15 @@
 }
 
 .timeline .date-info-start {
-  position: absolute;
-  top: -2px;
   left: 34%;
-  margin-left: -28px;
-  width: 100px;
+}
+
+.timeline-inverted .date-info-start {
+  left: 48%;
 }
 
 .timeline-inverted .date-info-end {
-  left: 54% !important;
-}
-
-.timeline-inverted .date-info {
-  left: 48%;
+  left: 54.5%;
 }
 
 .date-info .month {
@@ -217,6 +213,12 @@
     left: 90%;
     margin-left: -24px;
     width: auto;
+  }
+  .date-info-start {
+    left: 21% !important;
+  }
+  .date-info-end {
+    left: 39% !important;
   }
   .date-info .day {
     font-size: 12px;

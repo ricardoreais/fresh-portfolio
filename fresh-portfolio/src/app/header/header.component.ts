@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +6,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  navbarOpen = false;
 
-  constructor() { }
+  @HostListener('document:click', ['$event'])
+  clickout(event: { target: any; }) {
+    if (this.eRef.nativeElement.contains(event.target)) {
+      // Clicked inside navbar, do nothing
+    } else {
+      // Clicked outside navbar, close it
+      this.navbarOpen = false;
+    }
+  }
+
+  constructor(private eRef: ElementRef) {
+  }
 
   ngOnInit() {
   }
 
+  toggleNavbar() {
+    this.navbarOpen = !this.navbarOpen;
+  }
 }
