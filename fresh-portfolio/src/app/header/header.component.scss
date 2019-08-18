@@ -1,3 +1,8 @@
+@import '../../assets/variables.scss';
+
 a.nav-link {
   color: black !important;
+  &:hover { 
+    color: $main-color !important;
+  }
 }
