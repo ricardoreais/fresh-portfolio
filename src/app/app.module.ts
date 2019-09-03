@@ -7,6 +7,8 @@ import { HeaderComponent } from './header/header.component';
 import { IntroComponent } from './intro/intro.component';
 import { BioComponent } from './bio/bio.component';
 import { TimelineComponent } from './timeline/timeline.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,9 @@ import { TimelineComponent } from './timeline/timeline.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    // Material.
+    MatCardModule,
     AppRoutingModule
   ],
   providers: [],
