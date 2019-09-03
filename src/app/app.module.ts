@@ -9,6 +9,8 @@ import { BioComponent } from './bio/bio.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
+import { ProjectsComponent } from './projects/projects.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -16,13 +18,16 @@ import {MatCardModule} from '@angular/material/card';
     HeaderComponent,
     IntroComponent,
     BioComponent,
-    TimelineComponent
+    TimelineComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     // Material.
     MatCardModule,
+    // Ng-bootstrap
+    NgbModule,
     AppRoutingModule
   ],
   providers: [],
