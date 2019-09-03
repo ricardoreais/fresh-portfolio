@@ -1,0 +1,26 @@
+<div id="projects" class="jumbotron jumbotron-fluid mb-0 bg-light">
+  <div class="container">
+    <h1>Projects.</h1>
+
+    <ngb-carousel #carousel interval="2000" [pauseOnHover]="pauseOnHover">
+      <ng-template ngbSlide>
+        <div class="carousel-image">
+          <img src="assets/images/hangman.png" alt="Random first slide">
+        </div>
+        <div class="carousel-caption d-none d-sm-block">
+          <h4>Hangman game</h4>
+          <p>A mini web app with the classic hangman game! 🎮🕹🎲</p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="carousel-image">
+          <img src="assets/images/keyword-search.png" alt="Random second slide">
+        </div>
+        <div class="carousel-caption d-none d-sm-block">
+          <h4>Keyword search</h4>
+          <p>An autocomplete search with highlights!</p>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  </div>
+</div>
