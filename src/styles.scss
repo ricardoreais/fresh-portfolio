@@ -18,7 +18,7 @@ a {
 }
 
 .bg-main-color-opaque {
-  background-color: #bba7c4bd;
+  background-color: $main-color-opaque;
 }
 
 .bg-extra-light {
@@ -35,4 +35,9 @@ a {
 
 .container {
   padding: 8%;
+}
+
+.jumbotron{
+  margin: 0;
+  padding: 0;
 }
