@@ -1,11 +1,10 @@
-<app-header></app-header>
-<app-intro></app-intro>
-<app-bio></app-bio>
-
-
-<router-outlet></router-outlet>
-<footer id="sticky-footer" class="py-4 bg-light text-dark-50">
-    <div class="container text-center">
-        <small>Copyright &copy; Ricardo Reais v{{ version }}</small>
+<app-header [isLandingPage]="isLandingPage"></app-header>
+<div [class.main-content]="!isLandingPage" [class.mt-5]="!isLandingPage" [class.mt-sm-3]="!isLandingPage">
+    <router-outlet></router-outlet>
+</div>
+<footer id="sticky-footer" class="py-1 bg-light text-dark-50" *ngIf="!isLandingPage">
+    <div class="text-center my-1">
+        <small>Design by Ricardo Reais</small><br/>
+        <small>v{{ version }}</small>
     </div>
 </footer>

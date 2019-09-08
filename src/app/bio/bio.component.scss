@@ -1,23 +1,4 @@
-@import '../../assets/variables.scss';
-
-.progress {
-  background-color: white;
-  border-radius: 0%;
-}
-
-.progress-bar {
-  background-color: $main-color;
-  font-weight: bold;
-}
-
-.w-85 {
-  width: 85%;
-}
-
-.w-65 {
-  width: 65%;
-}
-
-.w-55 {
-  width: 55%;
+img {
+  max-width: 100%;
+  max-height: 100%;
 }

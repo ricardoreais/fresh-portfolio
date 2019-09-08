@@ -1,0 +1,15 @@
+<div id="skills" class="jumbotron jumbotron-fluid bg-extra-light">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1 class="mb-3">My skills<span class="main-color">.</span></h1>
+        <div *ngFor="let skill of skills">
+          <p>{{ skill.name }}</p>
+          <p>
+            <ngb-progressbar [value]="skill.value">{{ skill.description }}</ngb-progressbar>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
