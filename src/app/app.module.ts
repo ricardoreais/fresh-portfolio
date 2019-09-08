@@ -12,6 +12,7 @@ import {MatCardModule} from '@angular/material/card';
 import { ProjectsComponent } from './projects/projects.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { SkillsComponent } from './skills/skills.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SkillsComponent } from './skills/skills.component';
     BioComponent,
     TimelineComponent,
     ProjectsComponent,
-    SkillsComponent
+    SkillsComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

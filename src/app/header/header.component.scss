@@ -1,13 +1,28 @@
+@import '../../assets/variables.scss';
 
-a.nav-link {
-  color: black !important;
-  &:hover {
-    color: white !important;
+nav.alternative {
+  background-color: $secondary-color;
+
+  .navbar-brand {
+    color: $main-color;
+  }
+
+  a.nav-link {
+    &:hover {
+      color: $main-color !important;
+    }
   }
 }
 
-.navbar-brand {
+nav .navbar-brand {
   font-family: 'Roboto', sans-serif;
   font-size: 5vw;
   color: white;
+
+  a.nav-link {
+    color: black !important;
+    &:hover {
+      color: white !important;
+    }
+  }
 }
