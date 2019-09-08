@@ -14,10 +14,12 @@ nav.alternative {
   }
 }
 
-nav .navbar-brand {
-  font-family: 'Roboto', sans-serif;
-  font-size: 5vw;
-  color: white;
+nav {
+  .navbar-brand {
+    font-family: 'Roboto', sans-serif;
+    font-size: 5vw;
+    color: white;
+  }
 
   a.nav-link {
     color: black !important;
