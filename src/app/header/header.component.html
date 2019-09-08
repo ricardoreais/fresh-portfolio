@@ -7,19 +7,19 @@
   <div class="collapse navbar-collapse" [class.show]="navbarOpen">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/']">Home.</a>
+        <a class="nav-link" [routerLink]="['/']" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Home.</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/about']">About.</a>
+        <a class="nav-link" [routerLink]="['/about']" routerLinkActive="active-link">About.</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/experience']">Experience.</a>
+        <a class="nav-link" [routerLink]="['/experience']" routerLinkActive="active-link">Experience.</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/projects']">Projects.</a>
+        <a class="nav-link" [routerLink]="['/projects']" routerLinkActive="active-link">Projects.</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/contact']">Contact.</a>
+        <a class="nav-link" [routerLink]="['/contact']" routerLinkActive="active-link">Contact.</a>
       </li>
     </ul>
   </div>
