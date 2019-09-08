@@ -10,7 +10,12 @@ body {
   font-family: sans-serif;
 }
 
-p, a {
+h1 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+p,
+a {
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -24,4 +29,8 @@ p, a {
 
 .progress-bar {
   background-color: $main-color !important;
+}
+
+.main-color {
+  color: $main-color;
 }
