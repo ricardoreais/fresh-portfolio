@@ -2,8 +2,9 @@
 <div [class.main-content]="!isLandingPage">
     <router-outlet></router-outlet>
 </div>
-<footer id="sticky-footer" class="py-4 bg-light text-dark-50">
+<footer id="sticky-footer" class="py-1 bg-light text-dark-50" *ngIf="!isLandingPage">
     <div class="container text-center">
-        <small>Copyright &copy; Ricardo Reais v{{ version }}</small>
+        <small>Design by Ricardo Reais</small><br/>
+        <small>v{{ version }}</small>
     </div>
 </footer>

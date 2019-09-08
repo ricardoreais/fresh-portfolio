@@ -28,3 +28,9 @@ nav {
     }
   }
 }
+
+@media (max-width: 768px) {
+  nav .navbar-brand {
+    font-size: 9vw;
+  }
+}

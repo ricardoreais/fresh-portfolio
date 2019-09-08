@@ -6,3 +6,9 @@ p {
   box-shadow: none;
   background: none;
 }
+
+@media (max-width: 768px) {
+  p {
+    font-size: 4vw;
+  }
+}
