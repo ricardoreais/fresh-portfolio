@@ -1,8 +1,38 @@
 @import '../../assets/variables.scss';
 
-a.nav-link {
-  color: black !important;
-  &:hover { 
-    color: $main-color !important;
+nav.alternative {
+  background-color: $secondary-color;
+
+  .navbar-brand {
+    color: $main-color;
+  }
+
+  a.nav-link {
+    &:hover,
+    &.active-link {
+      color: $main-color !important;
+    }
+  }
+}
+
+nav {
+  .navbar-brand {
+    font-family: 'Roboto', sans-serif;
+    font-size: 4.7vw;
+    color: white;
+  }
+
+  a.nav-link {
+    color: black !important;
+    &:hover,
+    &.active-link {
+      color: white !important;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  nav .navbar-brand {
+    font-size: 9vw;
   }
 }

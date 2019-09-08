@@ -1,26 +1,17 @@
-<div id="projects" class="jumbotron jumbotron-fluid mb-0 bg-light">
+<div id="projects" class="jumbotron jumbotron-fluid bg-light">
   <div class="container">
-    <h1 class="mb-5">Projects.</h1>
-
-    <ngb-carousel #carousel interval="2000" [pauseOnHover]="pauseOnHover">
-      <ng-template ngbSlide>
-        <div class="carousel-image">
-          <img src="assets/images/hangman.png" alt="Random first slide">
-        </div>
-        <div class="carousel-caption d-none d-sm-block">
-          <h4>Hangman game</h4>
-          <p>A mini web app with the classic hangman game! 🎮🕹🎲</p>
-        </div>
-      </ng-template>
-      <ng-template ngbSlide>
-        <div class="carousel-image">
-          <img src="assets/images/keyword-search.png" alt="Random second slide">
-        </div>
-        <div class="carousel-caption d-none d-sm-block">
-          <h4>Keyword search</h4>
-          <p>An autocomplete search with highlights!</p>
-        </div>
-      </ng-template>
-    </ngb-carousel>
+    <h1 class="mb-5">Projects<span class="main-color">.</span></h1>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-between center">
+      <div fxFlex class="mb-5" *ngFor="let project of projects">
+        <a [href]="project.url" *ngIf="project.url; else simpleImage">
+          <img [src]="project.imagePath" class="mb-2">
+        </a>
+        <ng-template #simpleImage>
+          <img [src]="project.imagePath" class="mb-2">
+        </ng-template>
+        <h4>{{ project.name }}</h4>
+        <p>{{ project.description }}</p>
+      </div>
+    </div>
   </div>
 </div>

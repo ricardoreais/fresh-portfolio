@@ -1,13 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.css';
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import './src/assets/variables.scss';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:900i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+  background-color: $secondary-color;
+}
+
+h1,
+h4,
+p,
+a {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.bg-main-color-opaque {
+  background-color: $main-color-opaque;
 }
 
 .bg-extra-light {
   background-color: white;
+}
+
+.progress-bar {
+  background-color: $main-color !important;
+}
+
+.main-color {
+  color: $main-color;
+}
+
+.container {
+  padding: 8%;
+}
+
+.jumbotron{
+  margin: 0;
+  padding: 0;
 }
