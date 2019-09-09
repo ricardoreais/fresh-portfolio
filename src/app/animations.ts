@@ -1,29 +1,55 @@
 import { trigger, transition, style, query, animateChild, animate, group, state } from '@angular/animations';
 
 export const slideInAnimation = trigger('routeAnimations', [
-  transition('* <=> *', [
-    style({ position: 'fixed' }),
-    state('in', style({})),
-    // Set the initial style for both the entering and leaving elements.
-    query(':enter, :leave', [
+  // Any routing towards Home route.
+  transition('* => Home', [
+    query(
+      ':leave',
       style({
-        color: 'red',
         position: 'fixed',
-        // top: 0,
-        // left: 0,
-        // width: '100%'
+        top: 16,
+        left: 0,
+        width: '100%'
       })
-    ]),
-    // New component entering the page.
-    query(':enter', [
+    ),
+    query('#intro-video', [
       style({
-        color: 'blue',
         left: '-100%'
       })
     ]),
-    query(':leave', animateChild()),
     group([
-      query(':leave', [
+      query('#intro-video', [
+        animate(
+          '2000ms ease-out',
+          style({
+            left: '0%'
+          })
+        )
+      ]),
+      query(
+        ':leave',
+        animate(
+          '2000ms ease-out',
+          style({
+            left: '100%'
+          })
+        )
+      )
+    ])
+  ]),
+  // Any routing from Home route.
+  transition('Home => *', [
+    query(
+      ':leave',
+      style({
+        position: 'fixed',
+        top: 16,
+        left: 0,
+        width: '100%'
+      })
+    ),
+    group([
+      query('#intro-video', [
         animate(
           '2000ms ease-out',
           style({
@@ -32,7 +58,47 @@ export const slideInAnimation = trigger('routeAnimations', [
         )
       ]),
       query(
-        '#intro-video',
+        ':leave',
+        animate(
+          '2000ms ease-out',
+          style({
+            left: '100%'
+          })
+        )
+      )
+    ])
+  ]),
+  transition('* <=> *', [
+    state('in', style({})),
+    // Set the initial style for both the entering and leaving elements.
+    query(
+      ':enter, :leave',
+      [
+        style({
+          color: 'red',
+          position: 'fixed',
+          top: 16,
+          left: 0,
+          width: '100%'
+        })
+      ],
+      { optional: true }
+    ),
+    // New component entering the page.
+    query(
+      ':enter',
+      [
+        style({
+          color: 'blue',
+          left: '-100%'
+        })
+      ],
+      { optional: true }
+    ),
+    query(':leave', animateChild(), { optional: true }),
+    group([
+      query(
+        ':leave',
         [
           animate(
             '2000ms ease-out',
@@ -43,23 +109,20 @@ export const slideInAnimation = trigger('routeAnimations', [
         ],
         { optional: true }
       ),
-      query(':enter', [animate('2000ms ease-out', style({ left: '0%' }))])
+      // query(
+      //   '#intro-video',
+      //   [
+      //     animate(
+      //       '2000ms ease-out',
+      //       style({
+      //         left: '100%'
+      //       })
+      //     )
+      //   ],
+      //   { optional: true }
+      // ),
+      query(':enter', [animate('2000ms ease-out', style({ left: '0%' }))], { optional: true })
     ]),
-    query(':enter', animateChild())
+    query(':enter', animateChild(), { optional: true })
   ])
-  // transition('* <=> *', [
-  //   style({ position: 'relative' }),
-  //   query(':enter, :leave', [
-  //     style({
-  //       position: 'absolute',
-  //       top: 0,
-  //       left: 0,
-  //       width: '100%'
-  //     })
-  //   ]),
-  //   query(':enter', [style({ left: '-100%' })]),
-  //   query(':leave', animateChild()),
-  //   group([query(':leave', [animate('200ms ease-out', style({ left: '100%' }))]), query(':enter', [animate('300ms ease-out', style({ left: '0%' }))])]),
-  //   query(':enter', animateChild())
-  // ])
 ]);

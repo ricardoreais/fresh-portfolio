@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Router, NavigationStart, RouterOutlet } from '@angular/router';
+import { AnimationEvent } from '@angular/animations';
 import { filter } from 'rxjs/operators';
 import { slideInAnimation } from './animations';
 
@@ -19,9 +20,9 @@ export class AppComponent {
   isLandingPage = true;
 
   constructor(private router: Router) {
-    this.router.events.pipe(filter((event: any) => event instanceof NavigationStart)).subscribe((event: NavigationStart) => {
-      this.isLandingPage = event.url === '/';
-    });
+    // this.router.events.pipe(filter((event: any) => event instanceof NavigationStart)).subscribe((event: NavigationStart) => {
+    //   this.isLandingPage = event.url === '/';
+    // });
   }
 
   prepareRoute(outlet: RouterOutlet) {
@@ -29,7 +30,12 @@ export class AppComponent {
   }
 
   onAnimationEvent(event: AnimationEvent) {
+    this.isLandingPage = event.toState === 'Home' || event.fromState === 'Home';
     // openClose is trigger name in this example
     console.log(event);
+  }
+
+  onAnimationEndEvent(event: AnimationEvent) {
+    this.isLandingPage = this.router.url === '/';
   }
 }
