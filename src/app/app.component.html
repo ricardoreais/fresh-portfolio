@@ -1,10 +1,11 @@
 <app-header [isLandingPage]="isLandingPage"></app-header>
-<div [class.main-content]="!isLandingPage" [class.mt-5]="!isLandingPage" [class.mt-sm-3]="!isLandingPage">
-    <router-outlet></router-outlet>
+<div [class.main-content]="!isLandingPage" [class.mt-5]="!isLandingPage" [class.mt-sm-3]="!isLandingPage" [@routeAnimations]="prepareRoute(outlet)"
+(@routeAnimations.start)="onAnimationEvent($event)">
+    <router-outlet #outlet="outlet"></router-outlet>
 </div>
 <footer id="sticky-footer" class="py-1 bg-light text-dark-50" *ngIf="!isLandingPage">
     <div class="text-center my-1">
-        <small>Design by Ricardo Reais</small><br/>
+        <small>Design by Ricardo Reais</small><br />
         <small>v{{ version }}</small>
     </div>
 </footer>

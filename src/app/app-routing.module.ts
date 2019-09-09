@@ -9,23 +9,28 @@ import { ContactComponent } from './contact/contact.component';
 const routes: Routes = [
   {
     path: '',
-    component: IntroComponent
+    component: IntroComponent,
+    data: {animation: 'Home'}
   },
   {
     path: 'about',
-    component: BioComponent
+    component: BioComponent,
+    data: {animation: 'Bio'}
   },
   {
     path: 'experience',
-    component: TimelineComponent
+    component: TimelineComponent,
+    data: {animation: 'Timeline'}
   },
   {
     path: 'projects',
-    component: ProjectsComponent
+    component: ProjectsComponent,
+    data: {animation: 'Projects'}
   },
   {
     path: 'contact',
-    component: ContactComponent
+    component: ContactComponent,
+    data: {animation: 'Contact'}
   }
 ];
 
