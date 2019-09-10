@@ -8,39 +8,23 @@ export const slideInAnimation = trigger('routeAnimations', [
       ':leave',
       style({
         position: 'fixed',
-        top: 0,
+        top: 16,
         left: 0,
         width: '100%'
       }),
       { optional: true }
     ),
-    // Find the entering components and put them on the left side.
+    // Find the entering components and background video and put them on the left side.
     query(':enter, #intro-video', [
       style({
         position: 'fixed',
-        top: 0,
         width: '100%',
         left: '-100%'
       })
     ]),
-    // Find the entering background video and put it on the left side.
-    // query('#intro-video', [
-    //   style({
-    //     left: '-100%'
-    //   })
-    // ]),
     group([
-      // Move the entering components from the left (hidden) to the center of the page.
-      query(':enter', [
-        animate(
-          '500ms ease-out',
-          style({
-            left: '0%'
-          })
-        )
-      ]),
-      // Move the video from the left (hidden) to the center of the page.
-      query('#intro-video', [
+      // Move the entering components and video from the left (hidden) to the center of the page.
+      query(':enter, #intro-video', [
         animate(
           '500ms ease-out',
           style({
@@ -55,7 +39,6 @@ export const slideInAnimation = trigger('routeAnimations', [
           '500ms ease-out',
           style({
             position: 'fixed',
-            top: 0,
             left: '100%',
             width: '100%'
           })
@@ -71,7 +54,6 @@ export const slideInAnimation = trigger('routeAnimations', [
       ':leave',
       style({
         position: 'fixed',
-        top: 0,
         left: 0,
         width: '100%'
       })
@@ -83,7 +65,6 @@ export const slideInAnimation = trigger('routeAnimations', [
           '500ms ease-out',
           style({
             position: 'fixed',
-            top: 0,
             left: '100%'
           })
         )
@@ -101,15 +82,12 @@ export const slideInAnimation = trigger('routeAnimations', [
     ])
   ]),
   transition('* <=> *', [
-    state('in', style({})),
     // Set the initial style for both the entering and leaving elements.
     query(
-      ':enter, :leave',
+      ':enter, :leave, #sticky-footer',
       [
         style({
-          // color: 'red',
           position: 'fixed',
-          top: 16,
           left: 0,
           width: '100%'
         })
@@ -121,16 +99,15 @@ export const slideInAnimation = trigger('routeAnimations', [
       ':enter',
       [
         style({
-          // color: 'blue',
+          position: 'fixed',
           left: '-100%'
         })
       ],
       { optional: true }
     ),
-    // query(':leave', animateChild(), { optional: true }),
     group([
       query(
-        ':leave',
+        ':leave, #sticky-footer',
         [
           animate(
             '500ms ease-out',
@@ -141,20 +118,7 @@ export const slideInAnimation = trigger('routeAnimations', [
         ],
         { optional: true }
       ),
-      // query(
-      //   '#intro-video',
-      //   [
-      //     animate(
-      //       '500ms ease-out',
-      //       style({
-      //         left: '100%'
-      //       })
-      //     )
-      //   ],
-      //   { optional: true }
-      // ),
       query(':enter', [animate('500ms ease-out', style({ left: '0%' }))], { optional: true })
     ])
-    // query(':enter', animateChild(), { optional: true })
   ])
 ]);
