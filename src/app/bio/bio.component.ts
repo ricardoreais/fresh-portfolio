@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { slideInAnimation } from '../animations';
+import { slideInAnimation } from '../slide-in.animation';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({

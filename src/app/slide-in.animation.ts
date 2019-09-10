@@ -7,7 +7,7 @@ export const slideInAnimation = trigger('routeAnimations', [
       ':leave',
       style({
         position: 'fixed',
-        top: 16,
+        top: 0,
         left: 0,
         width: '100%'
       })
@@ -43,7 +43,7 @@ export const slideInAnimation = trigger('routeAnimations', [
       ':leave',
       style({
         position: 'fixed',
-        top: 16,
+        top: 0,
         left: 0,
         width: '100%'
       })

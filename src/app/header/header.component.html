@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light fixed-top" [class.bg-main-color-opaque]="navbarOpen" [class.alternative]="!isLandingPage">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" [class.bg-main-color-opaque]="navbarOpen" [class.alternative]="!isLandingPage" [@fade]="isLandingPage ? 'faded' : 'solid'">
   <span class="navbar-brand mb-0 h1">{{ brand }}</span>
   <a class="navbar-brand" href="#"></a>
   <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
