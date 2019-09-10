@@ -32,7 +32,7 @@ export class AppComponent {
   onAnimationEvent(event: AnimationEvent) {
     // this.isLandingPage = event.toState === 'Home' || event.fromState === 'Home';
     // openClose is trigger name in this example
-    console.log(event);
+    // console.log(event);
   }
 
   onAnimationEndEvent(event: AnimationEvent) {
