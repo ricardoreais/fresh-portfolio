@@ -16,6 +16,12 @@ export const fadeAnimation = trigger('fade', [
     })
   ),
   transition('faded => solid', [
+    // Set the initial color to fade from.
+    query('.navbar-brand', [
+      style({
+        color: 'white'
+      })
+    ]),
     group([
       // Change the navbar brand color (from it's current color) into purple.
       query('.navbar-brand', [
@@ -31,6 +37,12 @@ export const fadeAnimation = trigger('fade', [
     ])
   ]),
   transition('solid => faded', [
+    // Set the initial color to fade from.
+    query('.navbar-brand', [
+      style({
+        color: '#bba7c4'
+      })
+    ]),
     group([
       // Fade the navbar brand color (from it's current color) into white.
       query('.navbar-brand', [
