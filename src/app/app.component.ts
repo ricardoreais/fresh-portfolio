@@ -18,6 +18,7 @@ export class AppComponent {
   title = 'fresh-portfolio';
   version = environment.appVersion;
   isLandingPage = true;
+  animationOnGoing: boolean;
 
   constructor(private router: Router) {
     this.router.events.pipe(filter((event: any) => event instanceof NavigationStart)).subscribe((event: NavigationStart) => {
@@ -30,12 +31,10 @@ export class AppComponent {
   }
 
   onAnimationEvent(event: AnimationEvent) {
-    // this.isLandingPage = event.toState === 'Home' || event.fromState === 'Home';
-    // openClose is trigger name in this example
-    // console.log(event);
+    this.animationOnGoing = true;
   }
 
   onAnimationEndEvent(event: AnimationEvent) {
-    // this.isLandingPage = this.router.url === '/';
+    this.animationOnGoing = false;
   }
 }

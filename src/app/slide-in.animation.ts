@@ -8,7 +8,6 @@ export const slideInAnimation = trigger('routeAnimations', [
       ':leave',
       style({
         position: 'fixed',
-        top: 16,
         left: 0,
         width: '100%'
       }),
@@ -38,17 +37,23 @@ export const slideInAnimation = trigger('routeAnimations', [
         animate(
           '500ms ease-out',
           style({
-            position: 'fixed',
-            left: '100%',
-            width: '100%'
+            left: '100%'
           })
-        ),
-        { optional: true }
+        )
       )
     ])
   ]),
   // Any routing from Home route.
   transition('Home => *', [
+    // Find the entering elements and place them on the left side.
+    query(
+      ':enter',
+      style({
+        position: 'fixed',
+        left: '-100%',
+        width: '100%'
+      })
+    ),
     // Find the leaving elements and set the style below.
     query(
       ':leave',
@@ -76,6 +81,16 @@ export const slideInAnimation = trigger('routeAnimations', [
           '500ms ease-out',
           style({
             left: '100%'
+          })
+        )
+      ),
+      // Find the components entering the page and move them to the center of the page.
+      query(
+        ':enter',
+        animate(
+          '500ms ease-out',
+          style({
+            left: '0'
           })
         )
       )

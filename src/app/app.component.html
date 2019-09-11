@@ -1,9 +1,8 @@
 <app-header [isLandingPage]="isLandingPage"></app-header>
-<div [class.main-content]="!isLandingPage" [class.mt-5]="!isLandingPage" [@routeAnimations]="prepareRoute(outlet)"
-    (@routeAnimations.start)="onAnimationEvent($event)" (@routeAnimations.done)="onAnimationEndEvent($event)">
+<div [@routeAnimations]="prepareRoute(outlet)" (@routeAnimations.start)="onAnimationEvent($event)" (@routeAnimations.done)="onAnimationEndEvent($event)">
     <router-outlet #outlet="outlet"></router-outlet>
 </div>
-<footer id="sticky-footer" class="py-1 bg-light text-dark-50" *ngIf="!isLandingPage">
+<footer id="sticky-footer" class="py-1 bg-light text-dark-50" *ngIf="!isLandingPage && !animationOnGoing">
     <div class="text-center my-1">
         <small>Design by Ricardo Reais</small><br />
         <small>v{{ version }}</small>
