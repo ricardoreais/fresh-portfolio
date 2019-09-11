@@ -11,6 +11,7 @@ export class HeaderComponent implements OnInit {
   navbarOpen = false;
   brand = 'Ricardo Reais.';
   @Input() isLandingPage: boolean;
+  @Input() animationOnGoing: boolean;
 
   @HostListener('document:click', ['$event'])
   clickout(event: { target: any }) {

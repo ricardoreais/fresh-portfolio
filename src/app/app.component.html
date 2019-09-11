@@ -1,4 +1,4 @@
-<app-header [isLandingPage]="isLandingPage"></app-header>
+<app-header [isLandingPage]="isLandingPage" [animationOnGoing]="animationOnGoing"></app-header>
 <div [@routeAnimations]="prepareRoute(outlet)" (@routeAnimations.start)="onAnimationEvent($event)" (@routeAnimations.done)="onAnimationEndEvent($event)">
     <router-outlet #outlet="outlet"></router-outlet>
 </div>
