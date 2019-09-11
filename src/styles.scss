@@ -1,10 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.css';
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
-@import './src/assets/variables.scss';
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Roboto:900i&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+@import './assets/variables.scss';
+@import './assets/fonts/Open-Sans.css';
+@import './assets/fonts/Playfair-Display.css';
+@import './assets/fonts/Roboto-900.css';
 
 body {
   background-color: $secondary-color;
@@ -40,4 +40,25 @@ a {
 .jumbotron{
   margin: 0;
   padding: 0;
+}
+
+// Scrollbar.
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $main-color; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $main-color-dark; 
 }

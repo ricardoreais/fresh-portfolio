@@ -1,14 +1,17 @@
 import { Component, OnInit, HostListener, ElementRef, Input } from '@angular/core';
+import { fadeAnimation } from './fade.animation';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
+  animations: [fadeAnimation]
 })
 export class HeaderComponent implements OnInit {
   navbarOpen = false;
   brand = 'Ricardo Reais.';
   @Input() isLandingPage: boolean;
+  @Input() animationOnGoing: boolean;
 
   @HostListener('document:click', ['$event'])
   clickout(event: { target: any }) {
