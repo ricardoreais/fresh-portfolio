@@ -11,7 +11,6 @@ import { filter } from 'rxjs/operators';
   styleUrls: ['./app.component.scss'],
   animations: [
     slideInAnimation
-    // animation triggers go here
   ]
 })
 export class AppComponent {

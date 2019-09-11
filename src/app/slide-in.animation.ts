@@ -39,7 +39,7 @@ export const slideInAnimation = trigger('routeAnimations', [
           style({
             left: '100%'
           })
-        )
+        ), { optional: true }
       )
     ])
   ]),
