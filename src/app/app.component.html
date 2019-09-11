@@ -1,5 +1,5 @@
 <app-header [isLandingPage]="isLandingPage"></app-header>
-<div [class.main-content]="!isLandingPage" [class.mt-5]="!isLandingPage" [class.mt-sm-3]="!isLandingPage" [@routeAnimations]="prepareRoute(outlet)"
+<div [class.main-content]="!isLandingPage" [class.mt-5]="!isLandingPage" [@routeAnimations]="prepareRoute(outlet)"
     (@routeAnimations.start)="onAnimationEvent($event)" (@routeAnimations.done)="onAnimationEndEvent($event)">
     <router-outlet #outlet="outlet"></router-outlet>
 </div>
