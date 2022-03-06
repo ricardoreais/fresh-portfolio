@@ -1,10 +1,9 @@
 {
   "name": "fresh-portfolio",
-  "version": "2.3.0",
+  "version": "2.3.2",
   "scripts": {
-    "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --base-href https://ricardoreais.github.io/fresh-portfolio/",
+    "build": "ng build --configuration production --base-href https://ricardoreais.github.io/fresh-portfolio/",
     "deploy": "ngh --dir=dist/fresh-portfolio",
     "test": "ng test",
     "lint": "ng lint",

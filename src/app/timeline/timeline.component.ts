@@ -8,8 +8,12 @@ import { Experience } from '../models/experience.model';
 })
 export class TimelineComponent implements OnInit {
   experiences: Experience[] = [
+    // Farfetch.
+    new Experience('Full-stack Software Engineer', 'Farfetch - Lisbon, Portugal — November 2020 - Present', [
+      '• Developed new features for the purchase experience',
+    ], 'assets/images/farfetch-logo.jpg'),
     // Vortal.
-    new Experience('Full-stack Software Engineer', 'Vortal - Lisbon, Portugal — September 2018 - Present', [
+    new Experience('Full-stack Software Engineer', 'Vortal - Lisbon, Portugal — September 2018 - November 2020', [
       '• Developed a middleware application for e-procurement using .NET Core and design patterns such as IoC (dependency injection)',
       '• Unit testing of all code pushed to production',
       '• Integrated with the Journal of the European Union API to get contract notices published in the EU',
