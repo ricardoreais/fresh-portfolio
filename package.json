@@ -8,7 +8,6 @@
     "deploy": "ngh --dir=dist/fresh-portfolio",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
     "cy:open": "concurrently \"ng serve\" \"cypress open\"",
     "cy:run": "concurrently \"ng serve\" \"cypress run\""
   },
