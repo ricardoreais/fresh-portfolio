@@ -8,6 +8,6 @@ export class Experience {
     this.position = position;
     this.periodDescription = periodDescription;
     this.achievements = achievements;
-    this.companyLogo = companyLogo;
+    this.companyLogo = companyLogo ?? '';
   }
 }

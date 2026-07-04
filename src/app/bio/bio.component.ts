@@ -3,6 +3,7 @@ import { slideInAnimation } from '../slide-in.animation';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
+  standalone: false,
   selector: 'app-bio',
   templateUrl: './bio.component.html',
   styleUrls: ['./bio.component.scss'],

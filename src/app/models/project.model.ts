@@ -8,6 +8,6 @@ export class Project {
     this.name = name;
     this.description = description;
     this.imagePath = imagePath;
-    this.url = url;
+    this.url = url ?? '';
   }
 }
