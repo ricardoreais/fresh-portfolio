@@ -2,9 +2,17 @@ p {
   margin: 0;
 }
 
-.mat-card {
+.mat-mdc-card {
   box-shadow: none;
   background: none;
+}
+
+.mat-mdc-card-header {
+  padding: 0;
+}
+
+.mat-mdc-card-content {
+  padding: 0 0 0 56px;
 }
 
 @media (max-width: 768px) {
