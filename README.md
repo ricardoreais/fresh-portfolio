@@ -17,7 +17,7 @@ Navigate to `http://localhost:4200/`. The app will automatically reload on file 
 npm run build
 ```
 
-Build artifacts go to `dist/fresh-portfolio`. Uses `--base-href https://ricardoreais.github.io/fresh-portfolio/` for GitHub Pages hosting.
+Build artifacts go to `dist/fresh-portfolio`. Uses `--base-href /` for root-level GitHub Pages hosting.
 
 ## Deploy
 

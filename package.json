@@ -3,7 +3,7 @@
   "version": "2.4.0",
   "scripts": {
     "start": "ng serve",
-    "build": "ng build --configuration production --base-href https://ricardoreais.github.io/fresh-portfolio/",
+    "build": "ng build --configuration production --base-href /",
     "deploy": "ngh --dir=dist/fresh-portfolio",
     "test": "ng test",
     "lint": "ng lint",
