@@ -8,26 +8,34 @@ import { Experience } from '../models/experience.model';
 })
 export class TimelineComponent implements OnInit {
   experiences: Experience[] = [
+    // Kaizen Gaming.
+    new Experience('Senior Software Engineer', 'Kaizen Gaming - Lisbon, Portugal — May 2024 - Present', [
+      '• Leading development of high-scale GameTech solutions',
+      '• Developed and maintained software for online betting and gaming platforms',
+    ], 'assets/images/kaizen-logo.jpg'),
     // Farfetch.
-    new Experience('Full-stack Software Engineer', 'Farfetch - Lisbon, Portugal — November 2020 - Present', [
-      '• Developed new features for the purchase experience',
+    new Experience('Software Engineer', 'FARFETCH - Lisbon, Portugal — November 2020 - May 2024', [
+      '• Reduced monthly infrastructure costs by removing redundant microservices',
+      '• Helped cut down yearly address auto-complete provider costs by switching provider',
+      '• Built APIs with OAuth 2.0 authorization and managed their deployments to Kubernetes using ArgoCD',
+      '• Led a team of 6 members and delivered multiple features under the post-purchase and purchase scopes'
     ], 'assets/images/farfetch-logo.jpg'),
     // Vortal.
-    new Experience('Full-stack Software Engineer', 'Vortal - Lisbon, Portugal — September 2018 - November 2020', [
-      '• Developed a middleware application for e-procurement using .NET Core and design patterns such as IoC (dependency injection)',
-      '• Unit testing of all code pushed to production',
-      '• Integrated with the Journal of the European Union API to get contract notices published in the EU',
-      '• Created reusable Angular 2+ module and components for file uploading',
-      '• Release planning and management using SCRUM methodologies and Azure DevOps as management tool',
+    new Experience('Software Engineer', 'VORTAL Connecting Business - Lisbon, Portugal — September 2018 - November 2020', [
+      '• Responsible for the releases and production support of an e-tendering product',
+      '• Created a scalable client-side application with Angular 2+ modules and components',
+      '• Developed a .NET Core REST API to receive and provide tender information, with unit testing of all code pushed to production',
+      '• Planned each sprint using Azure DevOps as management tool and defined priorities of new features, applying SCRUM methodologies',
+      '• Integrated with the Journal of the European Union API to get all public tenders published in the EU',
       '• Implemented CI/CD in Azure Pipelines, which reduced by 30% the deployment time of the application'
     ], 'assets/images/vortal-logo.jpg'),
     // CGI.
-    new Experience('Full-stack Software Developer', 'CGI - Lisbon, Portugal — August 2017 - August 2018', [
-      '• Created AngularJS directives to prevent input mistakes in an user interface',
-      '• Structured reusable components for each independent feature',
-      '• Tested code weekly using Jasmine and MSTest and kept approx. 5100 automated unit tests with a code coverage above 90%',
-      '• Designed and implemented web services using WCF in order to send SOAP messages',
-      '• Defined a REST ASP.NET Web API to get and save user data'
+    new Experience('Junior Software Engineer', 'CGI - Lisbon, Portugal — August 2017 - August 2018', [
+      '• Built a Fintech health and welfare insurance simulation application',
+      '• Implemented unit testing using Jasmine and MSTest, and kept approx. 5100 automated unit tests with a code coverage above 90%',
+      '• Defined a REST ASP.NET Web API to get and save user data',
+      '• Created AngularJS directives to prevent input mistakes in a user interface and structured reusable components for each independent feature',
+      '• Designed SOAP web services using WCF to supply user information to external systems'
     ], 'assets/images/cgi-logo.jpg'),
 
   ];
