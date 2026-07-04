@@ -18,12 +18,12 @@ export class TimelineComponent implements OnInit {
       '• Reduced monthly infrastructure costs by removing redundant microservices',
       '• Helped cut down yearly address auto-complete provider costs by switching provider',
       '• Built APIs with OAuth 2.0 authorization and managed their deployments to Kubernetes using ArgoCD',
-      '• Led a team of 6 members and delivered multiple features under the post-purchase and purchase scopes'
+      '• Coordinated a team of 6 members and delivered multiple features under the post-purchase and purchase scopes'
     ], 'assets/images/farfetch-logo.jpg'),
     // Vortal.
     new Experience('Software Engineer', 'VORTAL Connecting Business - Lisbon, Portugal — September 2018 - November 2020', [
       '• Responsible for the releases and production support of an e-tendering product',
-      '• Created a scalable client-side application with Angular 2+ modules and components',
+      '• Created a scalable client-side application with Angular modules and components',
       '• Developed a .NET Core REST API to receive and provide tender information, with unit testing of all code pushed to production',
       '• Planned each sprint using Azure DevOps as management tool and defined priorities of new features, applying SCRUM methodologies',
       '• Integrated with the Journal of the European Union API to get all public tenders published in the EU',
