@@ -17,11 +17,14 @@ nav.alternative {
 
 nav {
   background-color: transparent;
+  padding-left: 2rem;
+  padding-right: 2rem;
 
   .navbar-brand {
     font-family: 'Roboto', sans-serif;
     font-size: 4.7vw;
     color: white;
+    margin-left: 0;
   }
 
   a.nav-link {
