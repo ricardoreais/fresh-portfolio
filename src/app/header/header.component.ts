@@ -2,6 +2,7 @@ import { Component, OnInit, HostListener, ElementRef, Input } from '@angular/cor
 import { fadeAnimation } from './fade.animation';
 
 @Component({
+  standalone: false,
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
@@ -10,8 +11,8 @@ import { fadeAnimation } from './fade.animation';
 export class HeaderComponent implements OnInit {
   navbarOpen = false;
   brand = 'Ricardo Reais.';
-  @Input() isLandingPage: boolean;
-  @Input() animationOnGoing: boolean;
+  @Input() isLandingPage!: boolean;
+  @Input() animationOnGoing!: boolean;
 
   @HostListener('document:click', ['$event'])
   clickout(event: { target: any }) {

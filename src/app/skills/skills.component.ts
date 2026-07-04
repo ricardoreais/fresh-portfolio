@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Skill } from '../models/skill.model';
 
 @Component({
+  standalone: false,
   selector: 'app-skills',
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.scss']

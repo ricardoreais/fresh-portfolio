@@ -6,6 +6,7 @@ import { slideInAnimation } from './slide-in.animation';
 import { filter } from 'rxjs/operators';
 
 @Component({
+  standalone: false,
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
@@ -17,7 +18,7 @@ export class AppComponent {
   title = 'fresh-portfolio';
   version = environment.appVersion;
   isLandingPage = true;
-  animationOnGoing: boolean;
+  animationOnGoing!: boolean;
 
   constructor(private router: Router) {
     this.router.events.pipe(filter((event: any) => event instanceof NavigationStart)).subscribe((event: NavigationStart) => {

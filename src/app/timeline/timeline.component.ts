@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Experience } from '../models/experience.model';
 
 @Component({
+  standalone: false,
   selector: 'app-timeline',
   templateUrl: './timeline.component.html',
   styleUrls: ['./timeline.component.scss']
