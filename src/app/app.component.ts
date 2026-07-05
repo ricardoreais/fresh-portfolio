@@ -1,7 +1,6 @@
 import { Component, inject } from '@angular/core';
-import { Router, RouterOutlet, NavigationStart } from '@angular/router';
+import { RouterOutlet, NavigationStart, Router } from '@angular/router';
 
-import { slideInAnimation } from './slide-in.animation';
 import { HeaderComponent } from './header/header.component';
 import { environment } from 'src/environments/environment';
 import { filter } from 'rxjs/operators';
@@ -12,9 +11,6 @@ import { filter } from 'rxjs/operators';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   imports: [RouterOutlet, HeaderComponent],
-  animations: [
-    slideInAnimation
-  ]
 })
 export class AppComponent {
   private router = inject(Router);
@@ -22,23 +18,10 @@ export class AppComponent {
   title = 'fresh-portfolio';
   version = environment.appVersion;
   isLandingPage = true;
-  animationOnGoing!: boolean;
 
   constructor() {
     this.router.events.pipe(filter((event) => event instanceof NavigationStart)).subscribe((event) => {
       this.isLandingPage = (event as NavigationStart).url === '/';
     });
-  }
-
-  prepareRoute(outlet: RouterOutlet) {
-    return outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation;
-  }
-
-  onAnimationEvent() {
-    this.animationOnGoing = true;
-  }
-
-  onAnimationEndEvent() {
-    this.animationOnGoing = false;
   }
 }

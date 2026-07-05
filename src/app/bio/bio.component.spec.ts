@@ -1,17 +1,16 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { describe, it, expect, beforeEach } from 'vitest';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { BioComponent } from './bio.component';
-
 
 describe('BioComponent', () => {
   let component: BioComponent;
   let fixture: ComponentFixture<BioComponent>;
 
-  beforeEach(waitForAsync(() => {
+  beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [BioComponent]
-    })
-      .compileComponents();
-  }));
+    });
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(BioComponent);

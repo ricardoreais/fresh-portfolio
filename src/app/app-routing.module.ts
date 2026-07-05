@@ -10,32 +10,27 @@ const routes: Routes = [
   {
     path: '',
     component: IntroComponent,
-    data: {animation: 'Home'}
   },
   {
     path: 'about',
-    component: BioComponent,
-    data: {animation: 'Bio'}
+    component: BioComponent
   },
   {
     path: 'experience',
-    component: TimelineComponent,
-    data: {animation: 'Timeline'}
+    component: TimelineComponent
   },
   {
     path: 'projects',
-    component: ProjectsComponent,
-    data: {animation: 'Projects'}
+    component: ProjectsComponent
   },
   {
     path: 'contact',
-    component: ContactComponent,
-    data: {animation: 'Contact'}
+    component: ContactComponent
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {enableViewTransitions: true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

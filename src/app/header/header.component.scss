@@ -1,37 +1,41 @@
 @use '../../assets/variables.scss' as *;
 
-nav.alternative {
-  background-color: $secondary-color;
-
-  .navbar-brand {
-    color: $main-color;
-  }
-
-  a.nav-link {
-    &:hover,
-    &.active-link {
-      color: $main-color !important;
-    }
-  }
-}
-
 nav {
   background-color: transparent;
   padding-left: 2rem;
   padding-right: 2rem;
+  transition: background-color 500ms ease-out;
+
+  &.solid {
+    background-color: $secondary-color;
+  }
 
   .navbar-brand {
     font-family: 'Roboto', sans-serif;
     font-size: 4.7vw;
     color: white;
     margin-left: 0;
+    transition: color 500ms ease-out;
+  }
+
+  &.solid .navbar-brand {
+    color: $main-color;
   }
 
   a.nav-link {
     color: black !important;
+    transition: color 500ms ease-out;
+
     &:hover,
     &.active-link {
       color: white !important;
+    }
+  }
+
+  &.solid a.nav-link {
+    &:hover,
+    &.active-link {
+      color: $main-color !important;
     }
   }
 }
