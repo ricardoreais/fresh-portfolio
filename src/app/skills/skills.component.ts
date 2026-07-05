@@ -1,13 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { NgbProgressbar } from '@ng-bootstrap/ng-bootstrap';
 import { Skill } from '../models/skill.model';
 
 @Component({
-  standalone: false,
+  standalone: true,
   selector: 'app-skills',
   templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.scss']
+  styleUrls: ['./skills.component.scss'],
+  imports: [NgbProgressbar]
 })
-export class SkillsComponent implements OnInit {
+export class SkillsComponent {
   skills: Skill[] = [
     new Skill('JavaScript', 'Good', 85),
     new Skill('C#', 'Damn!', 100),
@@ -16,7 +18,4 @@ export class SkillsComponent implements OnInit {
     new Skill('T-SQL', 'Modest', 55),
     new Skill('Java', 'Competent', 65)
   ];
-  constructor() {}
-
-  ngOnInit() {}
 }

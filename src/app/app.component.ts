@@ -1,40 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { RouterOutlet, NavigationStart, Router } from '@angular/router';
+
+import { HeaderComponent } from './header/header.component';
 import { environment } from 'src/environments/environment';
-import { Router, RouterOutlet, NavigationStart } from '@angular/router';
-import { AnimationEvent } from '@angular/animations';
-import { slideInAnimation } from './slide-in.animation';
 import { filter } from 'rxjs/operators';
 
 @Component({
-  standalone: false,
+  standalone: true,
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  animations: [
-    slideInAnimation
-  ]
+  imports: [RouterOutlet, HeaderComponent],
 })
 export class AppComponent {
+  private router = inject(Router);
+
   title = 'fresh-portfolio';
   version = environment.appVersion;
   isLandingPage = true;
-  animationOnGoing!: boolean;
 
-  constructor(private router: Router) {
-    this.router.events.pipe(filter((event: any) => event instanceof NavigationStart)).subscribe((event: NavigationStart) => {
-      this.isLandingPage = event.url === '/';
+  constructor() {
+    this.router.events.pipe(filter((event) => event instanceof NavigationStart)).subscribe((event) => {
+      this.isLandingPage = (event as NavigationStart).url === '/';
     });
-  }
-
-  prepareRoute(outlet: RouterOutlet) {
-    return outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation;
-  }
-
-  onAnimationEvent(event: AnimationEvent) {
-    this.animationOnGoing = true;
-  }
-
-  onAnimationEndEvent(event: AnimationEvent) {
-    this.animationOnGoing = false;
   }
 }

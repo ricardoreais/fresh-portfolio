@@ -1,17 +1,16 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { describe, it, expect, beforeEach } from 'vitest';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { IntroComponent } from './intro.component';
-
 
 describe('IntroComponent', () => {
   let component: IntroComponent;
   let fixture: ComponentFixture<IntroComponent>;
 
-  beforeEach(waitForAsync(() => {
+  beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [IntroComponent]
-    })
-      .compileComponents();
-  }));
+      imports: [IntroComponent]
+    });
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(IntroComponent);

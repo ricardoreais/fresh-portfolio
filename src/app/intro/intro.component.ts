@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  standalone: false,
+  standalone: true,
   selector: 'app-intro',
   templateUrl: './intro.component.html',
-  styleUrls: ['./intro.component.scss']
+  styleUrls: ['./intro.component.scss'],
+  imports: []
 })
-export class IntroComponent implements OnInit {
+export class IntroComponent {
   title = 'Software engineer.';
-
-  constructor() {}
-
-  ngOnInit() {}
 }

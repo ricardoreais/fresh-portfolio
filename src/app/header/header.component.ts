@@ -1,32 +1,26 @@
-import { Component, OnInit, HostListener, ElementRef, Input } from '@angular/core';
-import { fadeAnimation } from './fade.animation';
+import { Component, HostListener, ElementRef, Input, inject } from '@angular/core';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
-  standalone: false,
+  standalone: true,
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
-  animations: [fadeAnimation]
+  imports: [RouterLink, RouterLinkActive],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
+  private eRef = inject(ElementRef);
+
   navbarOpen = false;
   brand = 'Ricardo Reais.';
   @Input() isLandingPage!: boolean;
-  @Input() animationOnGoing!: boolean;
 
   @HostListener('document:click', ['$event'])
-  clickout(event: { target: any }) {
-    if (this.eRef.nativeElement.contains(event.target)) {
-      // Clicked inside navbar, do nothing
-    } else {
-      // Clicked outside navbar, close it
+  clickout(event: { target: EventTarget | null }) {
+    if (!this.eRef.nativeElement.contains(event.target)) {
       this.navbarOpen = false;
     }
   }
-
-  constructor(private eRef: ElementRef) {}
-
-  ngOnInit() {}
 
   toggleNavbar() {
     this.navbarOpen = !this.navbarOpen;

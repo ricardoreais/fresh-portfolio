@@ -1,13 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { MatCardModule } from '@angular/material/card';
 import { Experience } from '../models/experience.model';
 
 @Component({
-  standalone: false,
+  standalone: true,
   selector: 'app-timeline',
   templateUrl: './timeline.component.html',
-  styleUrls: ['./timeline.component.scss']
+  styleUrls: ['./timeline.component.scss'],
+  imports: [MatCardModule]
 })
-export class TimelineComponent implements OnInit {
+export class TimelineComponent {
   experiences: Experience[] = [
     // Kaizen Gaming.
     new Experience('Senior Software Engineer', 'Kaizen Gaming - Lisbon, Portugal — May 2024 - Present', [
@@ -38,9 +40,5 @@ export class TimelineComponent implements OnInit {
       '• Created AngularJS directives to prevent input mistakes in a user interface and structured reusable components for each independent feature',
       '• Designed SOAP web services using WCF to supply user information to external systems'
     ], 'assets/images/cgi-logo.jpg'),
-
   ];
-  constructor() {}
-
-  ngOnInit() {}
 }
