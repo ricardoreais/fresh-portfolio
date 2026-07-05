@@ -20,7 +20,9 @@
             "outputPath": "dist/fresh-portfolio",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": ["src/polyfills.ts"],
+            "polyfills": [
+              "src/polyfills.ts"
+            ],
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
@@ -89,7 +91,6 @@
             ]
           }
         },
-
         "cypress-run": {
           "builder": "@cypress/schematic:cypress",
           "options": {
@@ -107,11 +108,20 @@
             "watch": true,
             "headless": false
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
   "cli": {
     "analytics": false
-  },
+  }
 }
