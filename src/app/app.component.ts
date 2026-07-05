@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { Router, RouterOutlet, NavigationStart } from '@angular/router';
-import { AnimationEvent } from '@angular/animations';
+
 import { slideInAnimation } from './slide-in.animation';
 import { HeaderComponent } from './header/header.component';
 import { environment } from 'src/environments/environment';
@@ -34,11 +34,11 @@ export class AppComponent {
     return outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation;
   }
 
-  onAnimationEvent(_event: AnimationEvent) {
+  onAnimationEvent() {
     this.animationOnGoing = true;
   }
 
-  onAnimationEndEvent(_event: AnimationEvent) {
+  onAnimationEndEvent() {
     this.animationOnGoing = false;
   }
 }
