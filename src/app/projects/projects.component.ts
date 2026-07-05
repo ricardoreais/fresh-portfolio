@@ -15,7 +15,7 @@ export class ProjectsComponent implements OnInit {
       'assets/images/hangman.png',
       'https://ricardoreais.github.io/hangman/'
     ),
-    new Project('Keyword search', 'An autocomplete search with highlights!', 'assets/images/keyword-search.png')
+    new Project('Keyword search', 'An autocomplete search with highlights!', 'assets/images/keyword-search.png', 'https://ricardoreais.github.io/keyword-search/')
   ];
 
   constructor() { }
