@@ -1,11 +1,12 @@
 <div id="experience" class="jumbotron jumbotron-fluid bg-light mt-5">
   <div class="container">
     <h1>Professional experience<span class="main-color">.</span></h1>
-    <div class="row my-5" *ngFor="let experience of experiences">
+    @for (experience of experiences; track experience.position) {
+    <div class="row my-5">
       <div class="col">
         <mat-card>
           <mat-card-header>
-            <img mat-card-avatar [src]="experience.companyLogo">
+            <img mat-card-avatar [src]="experience.companyLogo" alt="{{ experience.position }} company logo">
             <mat-card-title>
               <p>{{ experience.position }}</p>
             </mat-card-title>
@@ -14,10 +15,13 @@
             </mat-card-subtitle>
           </mat-card-header>
           <mat-card-content>
-            <p *ngFor="let achievement of experience.achievements">{{achievement}}</p>
+            @for (achievement of experience.achievements; track achievement) {
+            <p>{{achievement}}</p>
+            }
           </mat-card-content>
         </mat-card>
       </div>
     </div>
+    }
   </div>
 </div>

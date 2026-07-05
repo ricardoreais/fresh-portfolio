@@ -8,9 +8,7 @@ describe('AppComponent', () => {
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule,
-        BrowserAnimationsModule
-      ],
-      declarations: [
+        BrowserAnimationsModule,
         AppComponent
       ],
     }).compileComponents();

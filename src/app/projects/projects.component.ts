@@ -1,13 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Project } from '../models/project.model';
 
 @Component({
-  standalone: false,
+  standalone: true,
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.scss']
+  styleUrls: ['./projects.component.scss'],
+  imports: []
 })
-export class ProjectsComponent implements OnInit {
+export class ProjectsComponent {
   projects: Project[] = [
     new Project(
       'Hangman game',
@@ -17,10 +18,4 @@ export class ProjectsComponent implements OnInit {
     ),
     new Project('Keyword search', 'An autocomplete search with highlights!', 'assets/images/keyword-search.png', 'https://ricardoreais.github.io/keyword-search/')
   ];
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
 }

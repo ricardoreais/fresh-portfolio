@@ -15,8 +15,12 @@ import { SkillsComponent } from './skills/skills.component';
 import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    NgbModule,
+    AppRoutingModule,
     HeaderComponent,
     IntroComponent,
     BioComponent,
@@ -24,15 +28,6 @@ import { ContactComponent } from './contact/contact.component';
     ProjectsComponent,
     SkillsComponent,
     ContactComponent
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    // Material.
-    MatCardModule,
-    // Ng-bootstrap
-    NgbModule,
-    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -9,9 +9,9 @@ describe('HeaderComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [HeaderComponent],
       imports: [
         BrowserAnimationsModule,
+        HeaderComponent
       ]
     })
       .compileComponents();

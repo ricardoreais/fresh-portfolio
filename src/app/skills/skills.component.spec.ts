@@ -9,9 +9,9 @@ describe('SkillsComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [SkillsComponent],
       imports: [
-        NgbModule
+        NgbModule,
+        SkillsComponent
       ]
     })
       .compileComponents();

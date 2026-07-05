@@ -2,16 +2,18 @@
   <div class="container">
     <h1 class="mb-5">Projects<span class="main-color">.</span></h1>
     <div style="display: flex; flex-flow: row wrap; justify-content: space-between; align-items: center;">
-      <div style="flex: 1; min-width: 250px;" class="mb-5" *ngFor="let project of projects">
-        <a [href]="project.url" *ngIf="project.url; else simpleImage">
-          <img [src]="project.imagePath" class="mb-2">
+      @for (project of projects; track project.name) {
+      <div style="flex: 1; min-width: 250px;" class="mb-5">
+        @if (project.url) {
+        <a [href]="project.url">
+          <img [src]="project.imagePath" alt="{{ project.name }} screenshot" class="mb-2">
         </a>
-        <ng-template #simpleImage>
-          <img [src]="project.imagePath" class="mb-2">
-        </ng-template>
+        } @else {
+          <img [src]="project.imagePath" alt="{{ project.name }} screenshot" class="mb-2">
+        }
         <h4>{{ project.name }}</h4>
         <p>{{ project.description }}</p>
       </div>
-    </div>
+      }
   </div>
 </div>

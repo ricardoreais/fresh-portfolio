@@ -8,7 +8,7 @@ describe('BioComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [BioComponent]
+      imports: [BioComponent]
     })
       .compileComponents();
   }));
